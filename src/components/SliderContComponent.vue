@@ -47,7 +47,10 @@ export default {
 <template>
   <div @mouseover="stopAutoPlay()" @mouseout="startAutoPlay()" class="slider">
     <div class="image-container">
-      <img :src="imageData[imageIndex].image" alt="" />
+      <img
+        :src="imageData[imageIndex].image"
+        :alt="imageData[imageIndex].name"
+      />
       <ButtonSliderComponent
         @click="nextPrevSlide(false)"
         :typeButton="leftClass"
